@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://www.liudeshu.com/index.html">
 <meta property="og:site_name" content="愿天下人人都有一瓶酱油">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Liu Deshu">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="愿天下人人都有一瓶酱油" type="application/atom+xml">
@@ -57,7 +57,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -65,10 +65,6 @@
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -85,7 +81,7 @@
 		        
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="zhihu" target="_blank" href="https://www.baidu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
 		</nav>
@@ -128,7 +124,7 @@
 			        
 						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="zhihu" target="_blank" href="https://www.baidu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 				</div>
 			</nav>
@@ -139,7 +135,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 50%"><a href="/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -155,6 +151,119 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-阿里云高级播放器集成" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/20/%E9%98%BF%E9%87%8C%E4%BA%91%E9%AB%98%E7%BA%A7%E6%92%AD%E6%94%BE%E5%99%A8%E9%9B%86%E6%88%90/">阿里云高级播放器集成</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/20/%E9%98%BF%E9%87%8C%E4%BA%91%E9%AB%98%E7%BA%A7%E6%92%AD%E6%94%BE%E5%99%A8%E9%9B%86%E6%88%90/" class="archive-article-date">
+  	<time datetime="2021-02-20T06:42:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>相关链接：<br>阿里云播放器<a href="%5Bhttps://helpcdn.aliyun.com/document_detail/94328.html?spm=a2c4g.11186623.6.999.58da40c0jWYFHR%5D(https://helpcdn.aliyun.com/document_detail/94328.html?spm=a2c4g.11186623.6.999.58da40c0jWYFHR)">SDK下载3.4.10</a><br>阿里云播放器<a href="%5Bhttps://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12%5D(https://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12)">SDK集成文档查看</a></p>
+<p>集成播放器的目的是让现有项目更好更方便的使用该SDK，所以将SDK集成进module，继而上传至远程maven仓库。</p>
+<h3 id="集成步骤"><a href="#集成步骤" class="headerlink" title="集成步骤"></a>集成步骤</h3><ul>
+<li><ol>
+<li>下载好当前最新3.4.10版本的播放器SDK后解压，解压后的内容有：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">demo文件夹：</span><br><span class="line">    ApsaraVideoPlayer项目源码</span><br><span class="line"></span><br><span class="line">sdk文件夹：</span><br><span class="line">    AlivcPlayer-3.4.10.aar</span><br><span class="line">    AlivcReporter-1.2.aar</span><br><span class="line">    AliyunVodPlayer-3.4.10.aar</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>本地新建项目lib_apsara_video，取包名com.xxx.apsara.video</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>新建module: module_apsara_video，包名com.aliyun.vodplayerview</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>将上面解压好的sdk文件夹下的三个文件拷贝到module_apsara_video的libs文件夹下，并<br>在module_apsara_video的build.gradle文件中android标签下添加如下代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">    flatDir &#123;</span><br><span class="line">       dirs &#39;libs&#39;</span><br><span class="line">    &#125;</span><br><span class="line">    jcenter()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sourceSets &#123;</span><br><span class="line">    main &#123;</span><br><span class="line">        jniLibs.srcDir &quot;src&#x2F;main&#x2F;libs&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+dependencies标签下添加：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">implementation(name:&#39;AlivcPlayer-3.4.10&#39;,ext:&#39;aar&#39;)</span><br><span class="line">implementation(name:&#39;AlivcReporter-1.2&#39;,ext:&#39;aar&#39;)</span><br><span class="line">implementation(name:&#39;AliyunVodPlayer-3.4.10&#39;,ext:&#39;aar&#39;)</span><br></pre></td></tr></table></figure>
+编译项目，查看是否出错。一般不会有问题。</li>
+</ol>
+</li>
+<li>5.拷贝项目demo中thirdparty-lib文件夹下的config.gradle到lib_apsara_video项目的根目录，在其build.gradle文件夹中引入：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply from: &#39;config.gradle&#39;</span><br></pre></td></tr></table></figure>
+在module_apsara_video的build.gradle中添加依赖代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">implementation externalAndroidSupportV4</span><br><span class="line">implementation externalAndroidAppCompatV7</span><br><span class="line">implementation externalOKHTTP</span><br><span class="line">implementation externalLeakcanary</span><br><span class="line">implementation externalAndroidRecyclerView</span><br><span class="line">implementation externalGSON</span><br><span class="line">implementation externalAliyunOSS</span><br></pre></td></tr></table></figure>
+编译项目，查看是否出错。一般也不会有问题。</li>
+<li><ol start="6">
+<li>将demo中的app/src/main目录下的jniLibs整个拷贝到module_apsara_video/src/main目录下</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>将demo中的ApsaraVideoPlayer/Aliyunplayer/player_demo/src/main下的res整个拷贝到module_aliyun_player/src/main下，原先的res可先删除</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>将demo中的ApsaraVideoPlayer\Aliyunplayer\player_demo\src\main\java\com\aliyun\vodplayerview下的多个文件夹一起拷贝到module_apsara_video/src/main/java/com/aliyun/vodplayerview下</li>
+</ol>
+</li>
+<li><ol start="9">
+<li>将demo中的ApsaraVideoPlayer\Aliyunplayer\player_demo\src\main\assets下的encrypt文件夹拷贝到lib_apsara_video/module_apsara_video/src/main/assets下</li>
+</ol>
+</li>
+<li><ol start="10">
+<li>修改文件，上述代码拷贝后，会有一些资源相关的引用错误，需要修改才能正常编译</li>
+</ol>
+</li>
+</ul>
+<p>播放界面的一些常用的控件，比如下载、更多、清晰度调整等相关的icon控制，可以在ControlView类中处理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.aliyun.vodplayerview.view.control.ControlView</span><br></pre></td></tr></table></figure>
+<h3 id="初始化操作"><a href="#初始化操作" class="headerlink" title="初始化操作"></a>初始化操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mAliyunVodPlayerView.setKeepScreenOn(true);</span><br><span class="line">String sdDir &#x3D; Environment.getExternalStorageDirectory().getAbsolutePath() + &quot;&#x2F;test_save_cache&quot;;</span><br><span class="line">mAliyunVodPlayerView.setPlayingCache(false, sdDir, 60 * 60 &#x2F;*时长, s *&#x2F;, 300 &#x2F;*大小，MB*&#x2F;);</span><br><span class="line">mAliyunVodPlayerView.setTheme(AliyunVodPlayerView.Theme.Blue);</span><br><span class="line">mAliyunVodPlayerView.setCirclePlay(true);</span><br><span class="line">mAliyunVodPlayerView.setAutoPlay(true);</span><br></pre></td></tr></table></figure>
+<h3 id="Url播放"><a href="#Url播放" class="headerlink" title="Url播放"></a>Url播放</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">PlayParameter.PLAY_PARAM_URL &#x3D; &quot;https:&#x2F;&#x2F;media.w3.org&#x2F;2010&#x2F;05&#x2F;sintel&#x2F;trailer.mp4&quot;;</span><br><span class="line">AliyunLocalSource.AliyunLocalSourceBuilder alsb &#x3D; new AliyunLocalSource.AliyunLocalSourceBuilder();</span><br><span class="line">alsb.setSource(PlayParameter.PLAY_PARAM_URL);</span><br><span class="line"></span><br><span class="line">AliyunLocalSource localSource &#x3D; alsb.build();</span><br><span class="line">if (mAliyunVodPlayerView !&#x3D; null) &#123;</span><br><span class="line">    mAliyunVodPlayerView.setLocalSource(localSource);</span><br><span class="line">    mAliyunVodPlayerView.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Vid-sts播放"><a href="#Vid-sts播放" class="headerlink" title="Vid+sts播放"></a>Vid+sts播放</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">AliyunVidSts vidSts &#x3D; new AliyunVidSts();</span><br><span class="line">&#x2F;&#x2F; videoId需要从服务器获取</span><br><span class="line">vidSts.setVid(mVideoInfo.getVideoId());</span><br><span class="line">&#x2F;&#x2F; ak_id、ak_secre、scu_token均需从服务器获取</span><br><span class="line">vidSts.setAcId(PlayParameter.PLAY_PARAM_AK_ID);</span><br><span class="line">vidSts.setAkSceret(PlayParameter.PLAY_PARAM_AK_SECRE);</span><br><span class="line">vidSts.setSecurityToken(PlayParameter.PLAY_PARAM_SCU_TOKEN);</span><br><span class="line">if (mAliyunVodPlayerView !&#x3D; null) &#123;</span><br><span class="line">    mAliyunVodPlayerView.setVidSts(vidSts);</span><br><span class="line">    mAliyunVodPlayerView.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Vid-authInfo播放"><a href="#Vid-authInfo播放" class="headerlink" title="Vid+authInfo播放"></a>Vid+authInfo播放</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 服务器响应数据示例</span><br><span class="line">&#123;</span><br><span class="line">  &quot;code&quot;: 0,</span><br><span class="line">  &quot;msg&quot;: &quot;SUCCESS&quot;,</span><br><span class="line">  &quot;currentTime&quot;: &quot;2019-06-19 16:08:33&quot;,</span><br><span class="line">  &quot;results&quot;: &#123;</span><br><span class="line">    &quot;requestId&quot;: &quot;1KC43EEF-A774-41VC-98HA-CBT3F89156BA&quot;,</span><br><span class="line">    &quot;playAuth&quot;: &quot;很长很长的base64编码字符串&quot;,</span><br><span class="line">    &quot;videoMeta&quot;: &#123;</span><br><span class="line">      &quot;coverURL&quot;: &quot;封面图片url&quot;,</span><br><span class="line">      &quot;duration&quot;: 641.846,</span><br><span class="line">      &quot;videoId&quot;: &quot;视频videoId&quot;,</span><br><span class="line">      &quot;title&quot;: &quot;视频标题&quot;,</span><br><span class="line">      &quot;status&quot;: &quot;Normal&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>根据上面的json数据，可以很方便的进行配置即可播放视频，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">AliyunPlayAuth.AliyunPlayAuthBuilder aliyunPlayAuthBuilder &#x3D; new AliyunPlayAuth.AliyunPlayAuthBuilder();</span><br><span class="line">aliyunPlayAuthBuilder.setVid(results.videoMeta.videoId);</span><br><span class="line">aliyunPlayAuthBuilder.setPlayAuth(results.playAuth);</span><br><span class="line">aliyunPlayAuthBuilder.setQuality(IAliyunVodPlayer.QualityValue.QUALITY_ORIGINAL);</span><br><span class="line">mAliyunVodPlayerView.setAuthInfo(aliyunPlayAuthBuilder.build());</span><br></pre></td></tr></table></figure>
+<h3 id="混淆"><a href="#混淆" class="headerlink" title="混淆"></a>混淆</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-keep class com.alivc.player.**&#123;*;&#125;</span><br><span class="line">-keep class com.aliyun.clientinforeport.**&#123;*;&#125;</span><br><span class="line">-keep class com.aliyun.vodplayer.**&#123;*;&#125;</span><br><span class="line">-dontwarn com.alivc.player.**</span><br></pre></td></tr></table></figure>
+<p>以上就是阿里云播放器的简单集成，更加详细的功能还需要关注<a href="%5Bhttps://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12%5D(https://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12)">SDK集成文档</a>，此文档只提供集成思路。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-开端" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -189,10 +298,6 @@
       
       
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/19/%E5%BC%80%E7%AB%AF/">展开全文 >></a>
-        </p>
       
 
       
@@ -231,10 +336,13 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 John Doe
+    		&copy; 2021 Liu Deshu
     	</div>
       	<div class="footer-right">
+        <!-- 
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+
+          -->
       	</div>
     </div>
   </div>
@@ -248,7 +356,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -275,25 +383,17 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -302,10 +402,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-all" q-show="innerArchive">
         <div class="search-wrap">
-          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <input class="search-ipt" q-model="search" type="text" placeholder="请输入关键词…">
           <i class="icon-search icon" q-show="search|isEmptyStr"></i>
           <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
         </div>
+        <!-- 
         <div class="widget tagcloud search-tag">
           <p class="search-tag-wording">tag:</p>
           <label class="search-switch">
@@ -316,6 +417,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <div class="clearfix"></div>
           </ul>
         </div>
+        -->
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
             缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
@@ -357,43 +459,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家！！！！</div>
   	  	
     	</section>
     

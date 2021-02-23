@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>开端</title>
+    <url>/2021/02/19/%E5%BC%80%E7%AB%AF/</url>
+    <content><![CDATA[<blockquote>
+<p>愿天下人人都有一瓶酱油！</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
     <title>阿里云高级播放器集成</title>
     <url>/2021/02/20/%E9%98%BF%E9%87%8C%E4%BA%91%E9%AB%98%E7%BA%A7%E6%92%AD%E6%94%BE%E5%99%A8%E9%9B%86%E6%88%90/</url>
     <content><![CDATA[<p>相关链接：<br>阿里云播放器<a href="%5Bhttps://helpcdn.aliyun.com/document_detail/94328.html?spm=a2c4g.11186623.6.999.58da40c0jWYFHR%5D(https://helpcdn.aliyun.com/document_detail/94328.html?spm=a2c4g.11186623.6.999.58da40c0jWYFHR)">SDK下载3.4.10</a><br>阿里云播放器<a href="%5Bhttps://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12%5D(https://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12)">SDK集成文档查看</a></p>
@@ -61,14 +69,6 @@ dependencies标签下添加：<figure class="highlight plain"><table><tr><td cla
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">AliyunPlayAuth.AliyunPlayAuthBuilder aliyunPlayAuthBuilder &#x3D; new AliyunPlayAuth.AliyunPlayAuthBuilder();</span><br><span class="line">aliyunPlayAuthBuilder.setVid(results.videoMeta.videoId);</span><br><span class="line">aliyunPlayAuthBuilder.setPlayAuth(results.playAuth);</span><br><span class="line">aliyunPlayAuthBuilder.setQuality(IAliyunVodPlayer.QualityValue.QUALITY_ORIGINAL);</span><br><span class="line">mAliyunVodPlayerView.setAuthInfo(aliyunPlayAuthBuilder.build());</span><br></pre></td></tr></table></figure>
 <h3 id="混淆"><a href="#混淆" class="headerlink" title="混淆"></a>混淆</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-keep class com.alivc.player.**&#123;*;&#125;</span><br><span class="line">-keep class com.aliyun.clientinforeport.**&#123;*;&#125;</span><br><span class="line">-keep class com.aliyun.vodplayer.**&#123;*;&#125;</span><br><span class="line">-dontwarn com.alivc.player.**</span><br></pre></td></tr></table></figure>
 <p>以上就是阿里云播放器的简单集成，更加详细的功能还需要关注<a href="%5Bhttps://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12%5D(https://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12)">SDK集成文档</a>，此文档只提供集成思路。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>开端</title>
-    <url>/2021/02/19/%E5%BC%80%E7%AB%AF/</url>
-    <content><![CDATA[<blockquote>
-<p>愿天下人人都有一瓶酱油！</p>
-</blockquote>
 ]]></content>
   </entry>
 </search>

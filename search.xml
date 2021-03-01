@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2021/02/25/%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>猎神谱大纲</title>
     <url>/2021/02/19/%E7%8C%8E%E7%A5%9E%E8%B0%B1%E5%A4%A7%E7%BA%B2/</url>
     <content><![CDATA[<p>作者：南方泉<br>作品名称：猎神谱<br>作品类型：东方玄幻</p>
@@ -20,11 +15,9 @@
 ]]></content>
   </entry>
   <entry>
-    <title>开端</title>
-    <url>/2021/02/19/%E5%BC%80%E7%AB%AF/</url>
-    <content><![CDATA[<blockquote>
-<p>愿天下人人都有一瓶酱油！！！ 是的哈哈上</p>
-</blockquote>
+    <title></title>
+    <url>/2021/02/25/%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
+    <content><![CDATA[<p>姜鱼是被一阵由远及近的马蹄声吵醒的。<br>说是马蹄声，其实姜鱼以前并没有见过真正的马。但多年浸淫在电影电视剧中的他，很快就能辨识出这是马儿奔跑间发出的声音。<br>“看看这人死没死，死的就拖走埋了”，伴随着戛然而止的马蹄声，一个低沉的男人声音响起：“光天化日，朗朗乾坤，衣不蔽体，成何体统！”</p>
 ]]></content>
   </entry>
   <entry>
@@ -88,6 +81,14 @@ dependencies标签下添加：<figure class="highlight plain"><table><tr><td cla
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">AliyunPlayAuth.AliyunPlayAuthBuilder aliyunPlayAuthBuilder &#x3D; new AliyunPlayAuth.AliyunPlayAuthBuilder();</span><br><span class="line">aliyunPlayAuthBuilder.setVid(results.videoMeta.videoId);</span><br><span class="line">aliyunPlayAuthBuilder.setPlayAuth(results.playAuth);</span><br><span class="line">aliyunPlayAuthBuilder.setQuality(IAliyunVodPlayer.QualityValue.QUALITY_ORIGINAL);</span><br><span class="line">mAliyunVodPlayerView.setAuthInfo(aliyunPlayAuthBuilder.build());</span><br></pre></td></tr></table></figure>
 <h3 id="混淆"><a href="#混淆" class="headerlink" title="混淆"></a>混淆</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-keep class com.alivc.player.**&#123;*;&#125;</span><br><span class="line">-keep class com.aliyun.clientinforeport.**&#123;*;&#125;</span><br><span class="line">-keep class com.aliyun.vodplayer.**&#123;*;&#125;</span><br><span class="line">-dontwarn com.alivc.player.**</span><br></pre></td></tr></table></figure>
 <p>以上就是阿里云播放器的简单集成，更加详细的功能还需要关注<a href="%5Bhttps://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12%5D(https://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12)">SDK集成文档</a>，此文档只提供集成思路。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>开端</title>
+    <url>/2021/02/19/%E5%BC%80%E7%AB%AF/</url>
+    <content><![CDATA[<blockquote>
+<p>愿天下人人都有一瓶酱油！！！ 是的哈哈上</p>
+</blockquote>
 ]]></content>
   </entry>
 </search>

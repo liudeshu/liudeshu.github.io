@@ -23,18 +23,20 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"www.liudeshu.com","root":"/","images":"/images","scheme":"Muse","version":"8.2.1","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
+<meta name="description" content="404 html, body{height:95%;}body{background: #0f3854;background: -webkit-radial-gradient(center ellipse, #0a2e38 0%, #000000 70%);background: radial-gradient(ellipse at center, #0a2e38 0%, #000">
 <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="https://www.liudeshu.com/tags/index.html">
+<meta property="og:title" content="愿天下人人都有一瓶酱油">
+<meta property="og:url" content="https://www.liudeshu.com/404.html">
 <meta property="og:site_name" content="愿天下人人都有一瓶酱油">
+<meta property="og:description" content="404 html, body{height:95%;}body{background: #0f3854;background: -webkit-radial-gradient(center ellipse, #0a2e38 0%, #000000 70%);background: radial-gradient(ellipse at center, #0a2e38 0%, #000">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-02-20T08:10:33.000Z">
-<meta property="article:modified_time" content="2021-02-20T08:13:01.066Z">
+<meta property="article:published_time" content="2021-03-01T09:00:34.215Z">
+<meta property="article:modified_time" content="2019-02-02T15:08:00.000Z">
 <meta property="article:author" content="Liu Deshu">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.liudeshu.com/tags/">
+<link rel="canonical" href="https://www.liudeshu.com/404">
 
 
 <script class="page-configurations">
@@ -46,7 +48,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>标签 | 愿天下人人都有一瓶酱油
+<title> | 愿天下人人都有一瓶酱油
 </title>
   
 
@@ -217,7 +219,7 @@
     
     <div class="post-block" lang="zh-CN"><header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">标签
+<h1 class="post-title" itemprop="name headline">
 </h1>
 
 <div class="post-meta-container">
@@ -227,14 +229,51 @@
 
       
       
-      <div class="post-body"><div class="tag-cloud">
-  <div class="tag-cloud-title">
-    暂无标签
-  </div>
-  <div class="tag-cloud-tags">
-    
-  </div>
+      <div class="post-body">
+          <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>404</title>
+<style>html, body{height:95%;}body{background: #0f3854;background: -webkit-radial-gradient(center ellipse, #0a2e38 0%, #000000 70%);background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);background-size: 100%;}p{margin:0;padding:0;}#clock{font-family: 'Share Tech Mono', monospace;color: #ffffff;text-align: center;position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);color: #daf6ff;text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);}#clock .time{letter-spacing: 0.05em;font-size: 60px;padding: 5px 0;}#clock .date{letter-spacing:0.1em;font-size:15px;}#clock .text{letter-spacing: 0.1em;font-size:12px;padding:20px 0 0;}</style>
+<script type="text/javascript" src="time.js"></script>
+</head>
+<body>
+<div id="clock">
+    <p class="date">...404 error page...</p>
+    <p class="time"></p>
+    <p class="text">1614589234215</p>
 </div>
+<script>
+var clock = new Vue({
+    el: '#clock',
+    data: {
+        time: '',
+        date: ''
+    }
+});
+var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+var timerID = setInterval(updateTime, 1000);
+updateTime();
+function updateTime() {
+    var cd = new Date();
+    clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
+    clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
+};
+function zeroPadding(num, digit) {
+    var zero = '';
+    for(var i = 0; i < digit; i++) {
+        zero += '0';
+    }
+    return (zero + num).slice(-digit);
+}</script>
+</body>
+ 
+</html>
 
       </div>
       
@@ -246,6 +285,7 @@
     
 
 
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -333,7 +373,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({"enable":true,"appId":"XkWpSELM2xMJfUL5q4D9gYes-gzGzoHsz","appKey":"NEhItsFWM9n21htREe4Q6Wft","serverURLs":"https://xkwpselm.lc-cn-n1-shared.com","placeholder":"请输入您的留言信息...","avatar":"mm","meta":["nick","mail"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"language":"zh-cn"}, {
       el: '#valine-comments',
-      path: "/tags/",
+      path: "/404.html",
       serverURLs: "https://xkwpselm.lc-cn-n1-shared.com"
     }));
   }, window.Valine);

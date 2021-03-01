@@ -6,14 +6,6 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>开端</title>
-    <url>/2021/02/19/%E5%BC%80%E7%AB%AF/</url>
-    <content><![CDATA[<blockquote>
-<p>愿天下人人都有一瓶酱油！</p>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
     <title>猎神谱大纲</title>
     <url>/2021/02/19/%E7%8C%8E%E7%A5%9E%E8%B0%B1%E5%A4%A7%E7%BA%B2/</url>
     <content><![CDATA[<p>作者：南方泉<br>作品名称：猎神谱<br>作品类型：东方玄幻</p>
@@ -22,7 +14,7 @@
 <p>异界太古时代，众神为了侵染天道进而控制天道，花费了几百万年终于逼出了世界本源天道本体，众神计划毁灭天道自己来制定天道规则。<br>就在天道即将被毁灭的瞬间，无形的大道波纹横扫整个异界，通过某个玄而又玄的奇点，随机联通到了地球所在世界空间上的十岁的姜鱼身上，化作一棵天地灵根，并趁着天道毁灭后的天地法则混乱之间，将其带进异界，然而这其中出现了变故，天地灵根带着姜鱼进入异界的刹那。无意中被时间法则洪流卷入其中，凡人的身躯被天地灵根保护着而不被摧毁，又经过几百万年的漫长时间，终于在这一天，姜鱼被“吐”了出来！</p>
 <p>然而，令异界神灵和天道想不到的是，地球世界所处空间也有大批神仙大能跟了进来。</p>
 <p>第一章：少年心性。 姜鱼被龙游宗所收留，平日里练习基础入门功法。每次练功生成的气都被吸收到某处不见踪影。</p>
-<p>第二章：此时</p>
+<p>第二章：此时少年心性。</p>
 <p>最终融合了自身的天地灵根，成就天道伟业。</p>
 ]]></content>
   </entry>
@@ -87,6 +79,14 @@ dependencies标签下添加：<figure class="highlight plain"><table><tr><td cla
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">AliyunPlayAuth.AliyunPlayAuthBuilder aliyunPlayAuthBuilder &#x3D; new AliyunPlayAuth.AliyunPlayAuthBuilder();</span><br><span class="line">aliyunPlayAuthBuilder.setVid(results.videoMeta.videoId);</span><br><span class="line">aliyunPlayAuthBuilder.setPlayAuth(results.playAuth);</span><br><span class="line">aliyunPlayAuthBuilder.setQuality(IAliyunVodPlayer.QualityValue.QUALITY_ORIGINAL);</span><br><span class="line">mAliyunVodPlayerView.setAuthInfo(aliyunPlayAuthBuilder.build());</span><br></pre></td></tr></table></figure>
 <h3 id="混淆"><a href="#混淆" class="headerlink" title="混淆"></a>混淆</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-keep class com.alivc.player.**&#123;*;&#125;</span><br><span class="line">-keep class com.aliyun.clientinforeport.**&#123;*;&#125;</span><br><span class="line">-keep class com.aliyun.vodplayer.**&#123;*;&#125;</span><br><span class="line">-dontwarn com.alivc.player.**</span><br></pre></td></tr></table></figure>
 <p>以上就是阿里云播放器的简单集成，更加详细的功能还需要关注<a href="%5Bhttps://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12%5D(https://helpcdn.aliyun.com/document_detail/61910.html?spm=a2c4g.11186623.6.1048.3834a26edsN2JG#h2-5-4-12)">SDK集成文档</a>，此文档只提供集成思路。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>开端</title>
+    <url>/2021/02/19/%E5%BC%80%E7%AB%AF/</url>
+    <content><![CDATA[<blockquote>
+<p>愿天下人人都有一瓶酱油！</p>
+</blockquote>
 ]]></content>
   </entry>
 </search>
